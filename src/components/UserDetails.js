@@ -8,7 +8,7 @@ function UserDetails() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://jsonplaceholder.typicode.com/users/:id`)
+     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data);
@@ -22,6 +22,7 @@ function UserDetails() {
 
   return (
     <div>
+      <h1>User Details</h1>
       <p>Name: {user.name}</p>
       <p>Username: {user.username}</p>
       <p>Email: {user.email}</p>
